@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7aacff;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    overflow: hidden;
+    --imagesCount: 5;
+    width: 85svw;
+    height: 90svh;
+    left: 0;
+    top: 0;
+    border: solid 1.5em #ffffffff;
+    border-radius: 1.5rem;
+    transform: translate(7.5%, 5%);
+}
+
+.slider-wrapper {
+    float: left;
+    width: calc(100% * var(--imagesCount));
+    height: 100%;
+    position: relative;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+img {
+    float: left;
+    height: 100%;
+    width: calc(100% / var(--imagesCount));
+    object-fit: cover;
+    object-position: left;
+
+}
