@@ -9,16 +9,26 @@
         <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     </head>
     <body>
-        <main>
-            <div class="container">
-                <figure class="slider-wrapper">
-                    <img src="./images/1.jpg" />
-                    <img src="./images/4.jpg" />
-                    <img src="./images/3.jpg" />
-                    <img src="./images/2.jpg" />
-                    <img src="./images/1.jpg" />
-                </figure>
+        <div class="container">
+            <figure class="slider-wrapper">
+                <img src="./images/termupaulrober.jpg" id="termupaulrober" />
+                <img src="./images/cristina.jpg" id="cristina" />
+                <img src="./images/virgo.jpg" id="virgo" />
+                <img src="./images/sampanie.jpg" id="sampanie" />
+                <img src="./images/termupaulrober.jpg" id="termupaulrober1-last" />
+            </figure>
+        </div>
+
+        <dialog id="intro-modal">
+            <div>
+                <h1>Bun venit la pagina de prezentare a lui Robert</h1>
+                <button id="start-presentation-btn">Baga prezentarea frate</button>
             </div>
-        </main>
+        </dialog>
+
+        <audio autoplay loop id="playAudio">
+            <source src="./audio/drum-de-fier-cale-ferata.mp3" type="audio/mp3" />
+        </audio>
     </body>
+    <script src="./scripts.js" defer></script>
 </html>
