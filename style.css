@@ -11,7 +11,8 @@ body {
     position: relative;
 }
 
-.container {
+#container {
+    display: none;
     position: absolute;
     overflow: hidden;
     --imagesCount: 5;
@@ -42,11 +43,6 @@ img {
     height: 100%;
     width: calc(100% / var(--imagesCount));
     object-fit: scale-down;
-    image-rendering: -moz-crisp-edges; /* Firefox        */
-    image-rendering: -o-crisp-edges; /* Opera          */
-    image-rendering: -webkit-optimize-contrast; /* Safari         */
-    image-rendering: optimize-contrast; /* CSS3 Proposed  */
-    -ms-interpolation-mode: nearest-neighbor; /* IE8+           */
 }
 
 #intro-modal {

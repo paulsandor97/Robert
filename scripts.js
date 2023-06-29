@@ -8,6 +8,9 @@ modal.show();
 
 const startPresentationButton = document.getElementById('start-presentation-btn');
 startPresentationButton.addEventListener('click', async () => {
+    const container = document.getElementById('container');
+    container.style.display = 'block';
+    
     modal.close();
     const delayPerImage = 3000;
     startAudio();
@@ -19,8 +22,8 @@ async function transitionImages(delayInMs, currentChildIndexInView = 0) {
     currentChildIndexInView++;
     if (currentChildIndexInView === sliderWrapperImagesCount) {
         sliderWrapper.setAttribute('no-transition', '');
-        await delay(delayInMs / 2);
         sliderWrapperStyle.left = '0%';
+        await delay(delayInMs / 2);
         currentChildIndexInView = 1;
         transitionImages(delayInMs, 0);
         return;
