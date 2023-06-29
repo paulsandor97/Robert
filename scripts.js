@@ -11,7 +11,7 @@ startPresentationButton.addEventListener('click', async () => {
     const container = document.getElementById('container');
     container.style.display = 'block';
     
-    modal.close();
+    modal.style.display = 'none';
     const delayPerImage = 3000;
     startAudio();
     await delay(delayPerImage);
